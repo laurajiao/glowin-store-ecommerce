@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/front-end/css/bootstrap.css" />
+  <link rel="stylesheet" href="/front-end/css/main.css">
+  <link rel="icon" href="/front-end/Img/icon.ico" type="image/x-icon">
+  <title>Glowin Socks-information</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg nav-dark bg-secondary">
+    <div class="container">
+      <a href="/front-end/html/index.html" class="navbar-brand">
+        <img src="/front-end/Img/logo.png" alt="logo" width="200" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDrop">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDrop">
+        <ul class="navbar-nav mx-auto text-black">
+
+          <li class="nav-item">
+            <a href="products.html?category=all" class="nav-link text-dark custom-font ">View All</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html?category=crew" class="nav-link text-dark custom-font ">Crew</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html?category=ankle" class="nav-link text-dark custom-font">Ankle Socks</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html?category=no-show" class="nav-link text-dark custom-font">No Show</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html?category=calf" class="nav-link text-dark custom-font">Calf Socks</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link text-dark custom-font">Home</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+        
+          <!-- Search Icon -->
+          <ul class="navbar-nav ms-auto">
+            <!-- Search dropdown -->
+            <li class="nav-item d-flex">
+              <button class="btn position-relative text-center  search-icon " type="button" data-bs-toggle="collapse"
+                href="#search-bar" role="button" aria-expanded="false" aria-controls="search-bar">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <div class="collapse" id="search-bar">
+                <form class="d-flex search-form" id="search-form" onsubmit="return handleSearchSubmit()">
+                  <input id="search-input" class="form-control me-2" type="search" placeholder="Search..."
+                    aria-label="Search">
+                  <button class="btn btn-custom" type="submit">Search</button>
+                </form>
+              </div>
+
+            </li>
+
+            <!-- Cart Icon -->
+            <li class="nav-item">
+              <button class="btn nav-link position-relative text-center cart-icon" data-bs-toggle="offcanvas"
+                data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                <i class="bi bi-cart "></i>
+                <span id="cart-badge"
+                  class="position-absolute top-0 start-100 translate-middle badge text-bg-dark">0</span>
+              </button>
+            </li>
+          </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cart-items"></div>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <div id="checkout-btn-container" class="btn w-100">
+        <button id="checkout-btn">Checkout</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- info -->
+   
+  <div class="container px-5 py-5 w-50 " id="category-title-area">
+  
+</div>
+
+  <!-- footer -->
+  <footer class="footer text-bg-dark py-5" id="information">
+    <div class="container">
+      <div class="row g-5 ">
+        <div class="col-md-6">
+          <h5>About us</h5>
+          <p class="custom-font">
+            Welcome to Glowin Socks, your local Australian destination for happy, comfortable, and stylish socks!
+            Starting at a local market in 2021, we're now online, bringing our unique socks and fashion accessories to
+            you.
+            Proudly based in Australia, our mission is simple: delivering happiness, one pair at a time.
+          </p>
+        </div>
+
+        <div class="col-md-3 ">
+          <h5>Customer Information</h5>
+          <ul class="list-unstyled custom-font">
+            <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=shipping">Shipping</a></li>
+            <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=exchange">Returns and exchanges</a></li>
+            <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="contact-info">
+            <h5>Contact</h5>
+            <ul class="list-unstyled custom-font">
+              <li class="mt-3"><i class="bi bi-envelope me-2 "></i> info@glowinsocks.com</li>
+              <li class="mt-3"><i class="bi bi-instagram me-2"></i>@glowinsocks</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+
+
+        </div>
+      </div>
+      <p class="text-white fz-sm custom-font fst-italic">©Copyright 2024 Glowin Socks</p>
+    </div>
+
+  </footer>
+
+  <script type="module" src="/front-end/js/main.js"></script>
+  <script type="module" src="/front-end/js/cart.js"></script>
+  <script type="module" src="/front-end/js/category-content.js"></script>
+  <script type="module" src="/front-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

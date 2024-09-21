@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/front-end/css/bootstrap.css" />
+  <link rel="stylesheet" href="/front-end/css/main.css" />
+  <link rel="icon" href="/front-end/Img/icon.ico" type="image/x-icon">
+  <title>Glowin Socks</title>
+</head>
+
+<body>
+  <div class= "shipping-bar bg-secondary">
+    <div class="shipping-content">
+      <div class="shipping-text">Free Shipping on orders over $50 Australia wide! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Enjoy Fast Delivery!</div>
+      <div class="shipping-text">Free Shipping on orders over $50 Australia wide! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Enjoy Fast Delivery!</div>
+      <div class="shipping-text">Free Shipping on orders over $50 Australia wide! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Enjoy Fast Delivery!</div>
+      <div class="shipping-text">Free Shipping on orders over $50 Australia wide! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Enjoy Fast Delivery!</div>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg nav-dark fixed-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="/front-end/Img/logo.png" alt="logo" width="200" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDrop">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDrop">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="#new-arrivals" class="nav-link fw-semibold text-danger">New</a>
+          </li>
+          <li class="nav-item">
+            <a href="#socks-category" class="nav-link custom-font text-dark">Category</a>
+          </li>
+          <li class="nav-item">
+            <a href="#top-picks" class="nav-link custom-font text-dark">Best Picks</a>
+          </li>
+          <li class="nav-item">
+            <a href="information.html?category=shipping" class="nav-link custom-font text-dark">Shipping</a>
+          </li>
+          <li class="nav-item">
+            <a href="#information" class="nav-link custom-font text-dark">Contact us</a>
+          </li>
+        </ul>
+
+        <!-- Search Icon -->
+        <ul class="navbar-nav ms-auto">
+          <!-- Search dropdown -->
+          <li class="nav-item d-flex">
+            <button class="btn position-relative text-center  search-icon " type="button" data-bs-toggle="collapse"
+              href="#search-bar" role="button" aria-expanded="false" aria-controls="search-bar">
+              <i class="bi bi-search"></i>
+            </button>
+            <div class="collapse" id="search-bar">
+              <form class="d-flex search-form" id="search-form" onsubmit="return handleSearchSubmit()">
+                <input id="search-input" class="form-control me-2" type="search" placeholder="Search..."
+                  aria-label="Search">
+                <button class="btn btn-custom" type="submit">Search</button>
+              </form>
+            </div>
+
+          </li>
+
+          <!-- Cart Icon -->
+          <li class="nav-item">
+            <button class="btn nav-link position-relative text-center cart-icon" data-bs-toggle="offcanvas"
+              data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+              <i class="bi bi-cart "></i>
+              <span id="cart-badge"
+                class="position-absolute top-0 start-100 translate-middle badge text-bg-dark">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+
+  <!-- cart -->
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body ">
+      <div id="cart-items"></div>
+      <p class="cart-amount-display custom-font fst-italic">Item Total: $<span id="cart-total">0</span></p>
+      <p class="cart-amount-display custom-font fst-italic">Shipping fee: $<span id="shipping-fee">0</span></p>
+      <p>Total: $<span id="grand-total">0</span></p>
+      <div class="text-center">
+        <button id="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+  <!-- end of cart -->
+
+
+  <!-- header -->
+  <header class="header-home py-7 pt-5 mb-5 ">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-12 text-container mt-5 pt-5">
+          <h3 class="display-4 text-light pt-5 mt-5 ">
+            Step into Comfort, Step into Glowin!
+          </h3>
+          <p class="lead text-light w-75 mx-auto mt-5 custom-font fst-italic">
+            Come to discover our Newest collection
+          </p>
+          <a href="#new-arrivals" class="btn btn-custom text-uppercase mt-3 text-dark">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- end of header -->
+
+  <!-- Img slider -->
+  <div class="row mx-5 ">
+    <div class="col-sm-12 col-md-6 col-lg-4 d-none d-md-block px-3 " id="slider-container-socks">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 px-3 " id="slider-container-clothes"></div>
+    <div class="col-sm-12 col-md-6 col-lg-4 d-none d-lg-block px-3" id="slider-container-accessories"></div>
+  </div>
+  <!-- end of img slider -->
+
+
+  <!-- Category -->
+  <div class="container categories-wrap pt-3" id="socks-category">
+    <div class="container text-center my-5">
+      <h1 class="custom-font lh-lg text-center">Discover our Categories</h1>
+    </div>
+
+    <div class="row d-flex categories-container">
+      <div class="col-lg-3 col-md-4  card category-card">
+        <img src="/front-end/Img/Category/Crew.png" alt="Crew Socks">
+        <div class="overlay">
+          <a href="products.html?category=crew" class="btn btn-custom">Crew</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 card category-card">
+        <img src="/front-end/Img/Category/Ankle.png" alt="Ankle Socks">
+        <div class="overlay">
+          <a href="products.html?category=ankle" class=" btn btn-custom ">Ankle</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 card category-card">
+        <img src="/front-end/Img/Category/No-show.png" alt="No-Show Socks">
+        <div class="overlay">
+          <a href="products.html?category=no-show" class="btn btn-custom">No Show</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 card category-card">
+        <img src="/front-end/Img/Category/Calf.png" alt="Calf Socks">
+        <div class="overlay">
+          <a href="products.html?category=calf" class="btn btn-custom">long</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 card category-card">
+        <img src="/front-end/Img/Category/Pack.png" alt="Packs">
+        <div class="overlay">
+          <a href="products.html?category=pack" class="btn btn-custom">Pack</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container text-center my-5">
+      <a class="view-all text custom-font text-dark text-center" href="products.html?category=all">View All</a>
+    </div>
+  </div>
+  <!-- end of category -->
+
+  <!-- new Arrival -->
+  <section id="new-arrivals" class="new-arrivals mb-5">
+    <div class="container mt-5">
+      <div class="description text-center my-5 w-50 mx-auto text-font-color">
+        <h1 class="pt-5">New Arrivals</h1>
+        <p class="py-3 custom-font">
+          Explore our newest collection of fun,designed to bring joy to every step!</p>
+      </div>
+      <div class="row g-2" id="new-arrivals-display"></div>
+    </div>
+  </section>
+  <!-- End of new Arrival -->
+
+  <!-- Top pick Products Display-->
+  <section id="top-picks" class="products-display">
+    <div class="container mt-5">
+      <div class="description text-center my-5 w-50 mx-auto text-font-color">
+        <h1 class="pt-5 ">Best Picks 2024</h1>
+        <p class="lh-lg custom-font py-3">Step into fun with our best-selling happy and funky socks!
+          Loved for their bold designs and ultimate comfort,
+          these socks are perfect for brightening up your wardrobe and your day.</p>
+      </div>
+      <div class="row g-4 product-display-container">
+        <div class="col-lg-6 col-md-6 col-sm-12" id="product-list-large">
+          <!-- large display -->
+        </div>
+        <div class="col-lg-6 col-md-6 d-none d-md-block">
+          <div class="row g-4" id="product-list-small">
+            <!-- small display -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end of Top pick products display -->
+
+  <!-- subscribe -->
+  <section id="subscribe" class="subscribe my-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center offset-md-3">
+          <h4>Subscribe to get 15% off for your first order Today!</h4>
+          <form id="subscribeForm">
+            <div class="my-4">
+              <input type="email" id="email" class="form-control form-control-lg" placeholder="Enter your email">
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- end of subscribe -->
+
+
+  <!-- footer -->
+  <footer class="footer text-bg-dark py-5" id="information">
+    <div class="container">
+      <div class="row g-5 ">
+        <div class="col-md-6">
+          <h5>About us</h5>
+          <p class="custom-font">
+            Welcome to Glowin Socks, your local Australian destination for happy, comfortable, and stylish socks!
+            Starting at a local market in 2021, we're now online, bringing our unique socks and fashion accessories to
+            you.
+            Proudly based in Australia, our mission is simple: delivering happiness, one pair at a time.
+          </p>
+        </div>
+
+        <div class="col-md-3 ">
+          <h5>Customer Information</h5>
+          <ul class="list-unstyled custom-font">
+            <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=shipping">Shipping</a></li>
+            <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=exchange">Returns and exchanges</a></li>
+            <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <div class="contact-info">
+            <h5>Contact</h5>
+            <ul class="list-unstyled custom-font">
+              <li class="mt-3"><i class="bi bi-envelope me-2 "></i> info@glowinsocks.com</li>             
+              <li class="mt-3"><i class="bi bi-instagram me-2"></i>@glowinsocks</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <p class="text-white fz-sm custom-font fst-italic">©Copyright 2024 Glowin Socks</p>
+    </div>
+  </footer>
+  <!-- End of footer -->
+
+
+  <script type="module" src="/front-end/js/main.js"></script>
+  <script type="module" src="/front-end/js/category-content.js"></script>
+  <script type="module" src="/front-end/js/subscribe.js"></script>
+  <script type="module" src="/front-end/js/slider.js"></script>
+  <script type="module" src="/front-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Sandbox Account -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AbytSob3tinNSwtdczE6cxgymIGnw-96hTjB6xXk2FKXXrJofvppzGRDU3wpRZih0YVRy-6MuVD8lxYf&currency=AUD"></script>
+
+</body>
+</html>
