@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sass cache (if applicable)
+.sass-cache/
+
+# MacOS specific files
+.DS_Store
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build output (if you compile your Sass or other assets)
+build/
+dist/
+
+# Git specific
+*.lock
+*.swp
+#
+css
