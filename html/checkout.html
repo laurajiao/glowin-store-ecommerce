@@ -12,12 +12,26 @@
     <link rel="stylesheet" href="/front-end/css/bootstrap.css" />
     <link rel="stylesheet" href="/front-end/css/main.css" />
 
-    <link rel="icon" href="/front-end/Img/icon.ico" type="image/x-icon">
+    <link rel="icon" href="/front-end/Img/icon.ico" type="image/x-icon" />
     <title>Glowin Socks-Checkout</title>
   </head>
   <body>
+    <div class="shipping-bar bg-secondary">
+      <div class="shipping-content">
+        <div class="shipping-text">
+          Testing mood &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; This Website is
+          currently on testing mood.All payments are processed in sandbox and
+          will not be charged
+        </div>
+        <div class="shipping-text">
+          Testing mood &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; This Website is
+          currently on testing mood.All payments are processed in sandbox and
+          will not be charged
+        </div>
+      </div>
+    </div>
     <header>
-      <nav class="navbar navbar-expand-lg  bg-secondary nav-dark">
+      <nav class="navbar navbar-expand-lg bg-secondary nav-dark">
         <a href="index.html" class="navbar-brand ps-5">
           <img src="/front-end/Img/logo.png" alt="logo" width="200" />
         </a>
@@ -26,7 +40,9 @@
 
     <!-- Checkout section -->
 
-    <div class="row container-fluid d-flex justify-content-between text-center my-2">
+    <div
+      class="row container-fluid d-flex justify-content-between text-center my-2"
+    >
       <h3 class="mb-5 py-3 custom-font">Your order details</h3>
       <div class="col-md-4 text-start container">
         <div id="checkout-items"></div>
@@ -37,10 +53,14 @@
           Shipping fee: $<span id="shipping-fee">0</span>
         </p>
         <p class="fw-semibold ps-3">Total: $<span id="grand-total">0</span></p>
-        <p class="ps-3">(Please note that we do not offer international delivery at this stage)</p>
+        <p class="ps-3">
+          (Please note that we do not offer international delivery at this
+          stage)
+        </p>
         <div class="pt-2">
           <a href="index.html">
-            <button class="btn-custom">Back to Shop</button></a>
+            <button class="btn-custom">Back to Shop</button></a
+          >
         </div>
       </div>
       <div class="col-md-5 mt-3 pt-2" id="paypal-button-container"></div>
@@ -92,9 +112,27 @@
           <div class="col-md-3">
             <h5>Customer Information</h5>
             <ul class="list-unstyled custom-font">
-              <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=shipping">Shipping</a></li>
-              <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=exchange">Returns and exchanges</a></li>
-              <li class="mt-3"><a class="text-decoration-none text-white" href="information.html?category=privacy">Privacy Policy</a></li>
+              <li class="mt-3">
+                <a
+                  class="text-decoration-none text-white"
+                  href="information.html?category=shipping"
+                  >Shipping</a
+                >
+              </li>
+              <li class="mt-3">
+                <a
+                  class="text-decoration-none text-white"
+                  href="information.html?category=exchange"
+                  >Returns and exchanges</a
+                >
+              </li>
+              <li class="mt-3">
+                <a
+                  class="text-decoration-none text-white"
+                  href="information.html?category=privacy"
+                  >Privacy Policy</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -124,6 +162,9 @@
     <script type="module" src="/front-end/js/subscribe.js"></script>
     <!-- sandbox account -->
     <script src="https://www.paypal.com/sdk/js?client-id=AbytSob3tinNSwtdczE6cxgymIGnw-96hTjB6xXk2FKXXrJofvppzGRDU3wpRZih0YVRy-6MuVD8lxYf&currency=AUD"></script>
-    <script type="module"src="/front-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="module"
+      src="/front-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
   </body>
 </html>
