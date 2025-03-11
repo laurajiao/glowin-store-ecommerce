@@ -1,8 +1,6 @@
 # glowin-store-ecommerce
 This project is the front-end code base for dynamic e-commerce website built using HTML, Bootstrap, Sass, JavaScript, and Strapi for content management. It features a custom shopping cart powered by local storage,subscription function and integrates PayPal for secure payments.
 
-#The website is live and operational at https://www.glowinsocks.com, where you can explore the full functionality and experience the project in action.
-
 #Features
 
 Responsive Design: Built with Bootstrap for all devices.
