@@ -25,3 +25,4 @@ Payments: PayPal API
 
 #Backend Configuration (Optional)
 To fully run the project with backend functionality (like managing product data through Strapi), you'll need to configure the backend locally by installing Strapi and PayPal to configure API access.
+https://github.com/laurajiao/glowin-store-ecommerce-backend
